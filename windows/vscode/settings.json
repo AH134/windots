@@ -1,0 +1,174 @@
+// Default settings which other vscode profiles extend from
+{
+  // Telemetry
+  "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
+  "telemetry.editStats.enabled": false,
+
+  // Breadcrumb
+  "breadcrumbs.enabled": false,
+
+  // Window
+  "window.zoomLevel": 2,
+  "window.titleBarStyle": "custom",
+  "workbench.navigationControl.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Catppuccin Mocha",
+
+  // Editor
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 21,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.cursorSurroundingLines": 8,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.lineNumbers": "relative",
+  "editor.semanticHighlighting.enabled": true,
+
+  // Terminal
+  "terminal.integrated.minimumContrastRatio": 1,
+
+  // ---EXTENSION SETTINGS---
+  // Gitlens telemetry
+  "gitlens.telemetry.enabled": false,
+
+  // Svelte
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+
+  // Tailwind CSS
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
+  // Go
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "gopls": { "ui.semanticTokens": true },
+
+  // Vim
+  "vim.leader": "<Space>",
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "vim.handleKeys": {
+    // Bring back normal ctrl keybinds
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-s>": false,
+    "<C-p>": false,
+    "<C-b>": false,
+    "<C-z>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<S-h>"],
+      "commands": [":bprevious"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": [":bnext"]
+    },
+    {
+      "before": ["<leader>", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": [":split"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["g", "p", "d"],
+      "commands": ["editor.action.peekDefinition"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "p", "i"],
+      "commands": ["editor.action.peekImplementation"]
+    },
+    {
+      "before": ["g", "q"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    {
+      "before": ["g", "t"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["g", "p", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    }
+  ]
+}
