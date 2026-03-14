@@ -19,9 +19,6 @@ install_tools() {
 
     sudo dnf copr enable atim/starship -y
     sudo dnf install starship -y
-
-    mkdir -p ~/.config
-    starship preset nerd-font-symbols -o ~/.config/starship.toml
     
     if ! command -v cargo > /dev/null 2>&1; then
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
